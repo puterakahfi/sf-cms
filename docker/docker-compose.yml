@@ -2,3 +2,7 @@ nginx:
   image: bitnami/nginx
   ports:
     - "8082:80"
+phpfpm:
+  image: bitnami/php-fpm
+  volumes:
+    - ./:/app
