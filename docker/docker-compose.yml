@@ -1,0 +1,4 @@
+nginx:
+  image: bitnami/nginx
+  ports:
+    - "8082:80"
