@@ -4,7 +4,7 @@ FROM php:7.0-fpm
 MAINTAINER Putera Kahfi <puterakahfi@gmail.com>
 
 #ADD ./symfony.ini /usr/local/etc/php/conf.d
-#ADD ./symfony.pool.conf /usr/local/etc/php-fpm.d/
+ADD ./symfony.pool.conf /usr/local/etc/php-fpm.d/
 
 RUN apt-get update && apt-get install libpq-dev -y
 

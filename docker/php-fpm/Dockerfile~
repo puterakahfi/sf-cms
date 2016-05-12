@@ -3,8 +3,8 @@ FROM php:7.0-fpm
 
 MAINTAINER Putera Kahfi <puterakahfi@gmail.com>
 
-#ADD ./laravel.ini /usr/local/etc/php/conf.d
-#ADD ./laravel.pool.conf /usr/local/etc/php-fpm.d/
+#ADD ./symfony.ini /usr/local/etc/php/conf.d
+#ADD ./symfony.pool.conf /usr/local/etc/php-fpm.d/
 
 RUN apt-get update && apt-get install libpq-dev -y
 
@@ -15,7 +15,7 @@ RUN docker-php-ext-install \
 
 RUN usermod -u 1000 www-data
 
-WORKDIR /var/www/laravel
+WORKDIR /var/www/symfony
 
 CMD ["php-fpm"]
 
