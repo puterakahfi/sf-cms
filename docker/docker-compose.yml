@@ -2,9 +2,10 @@ nginx:
   build: ./nginx
   ports:
     - "8082:80"
-  volumes:
-    - ./:/app
-phpfpm:
+  links:
+    - php-fpm
+
+php-fpm:
   build: ./php-fpm
   volumes:
-    - ./:/app
+    - ./:/var/www/symfony
